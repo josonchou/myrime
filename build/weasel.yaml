@@ -2,11 +2,21 @@ __build_info:
   rime_version: 1.8.5
   timestamps:
     weasel: 1686057548
-    weasel.custom: 1691770934
+    weasel.custom: 1692289550
 app_options:
+  Code.exe:
+    ascii_mode: true
+  WindowsTerminal.exe:
+    ascii_mode: true
   cmd.exe:
     ascii_mode: true
   conhost.exe:
+    ascii_mode: true
+  idea64.exe:
+    ascii_mode: true
+  photoshop.exe:
+    ascii_mode: true
+  pycharm64.exe:
     ascii_mode: true
 config_version: 0.22
 preset_color_schemes:
