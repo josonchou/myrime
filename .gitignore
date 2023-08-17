@@ -1,2 +1,6 @@
+
+.DS_Store
+user.yaml
+installation.yaml
 *.userdb
 *.ldb
