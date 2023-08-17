@@ -1,0 +1,9 @@
+# Rime user dictionary
+#@/db_name	luna_pinyin
+#@/db_type	userdb
+#@/rime_version	1.8.5
+#@/tick	3
+#@/user_id	a9cfc3de-673b-4c99-8a22-ac18d7e1c784
+ce shi 	測試	c=1 d=1 t=1
+jiao cheng 	教程	c=1 d=1 t=3
+shi yong 	使用	c=1 d=1 t=2
