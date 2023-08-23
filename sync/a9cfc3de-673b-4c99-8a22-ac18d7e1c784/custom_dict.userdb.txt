@@ -1,0 +1,106 @@
+# Rime user dictionary
+#@/db_name	custom_dict
+#@/db_type	userdb
+#@/rime_version	1.8.5
+#@/tick	150
+#@/user_id	a9cfc3de-673b-4c99-8a22-ac18d7e1c784
+a 	啊	c=1 d=1 t=93
+an jian 	按键	c=2 d=1.99501 t=137
+ba 	吧	c=2 d=1.77105 t=100
+bian geng 	变更	c=1 d=1 t=75
+bo he 	薄荷	c=2 d=1.99501 t=143
+ce shi 	测试	c=2 d=1.99501 t=27
+cha zhao 	查找	c=2 d=1.97045 t=139
+chai zi 	拆字	c=1 d=1 t=145
+chu li 	处理	c=1 d=1 t=36
+cong 	從	c=1 d=1 t=129
+dao 	到	c=1 d=1 t=120
+de 	的	c=8 d=6.79238 t=121
+di fang 	地方	c=1 d=1 t=102
+ding wei 	定位	c=1 d=1 t=119
+en 	恩	c=3 d=2.52342 t=126
+fei 	非	c=1 d=1 t=135
+fen li 	分离	c=1 d=1 t=138
+fen zu 	分组	c=1 d=1 t=141
+gai 	改	c=1 d=1 t=99
+gai ba 	该把	c=1 d=1 t=96
+gai yi xia 	改一下	c=1 d=1 t=128
+gong neng 	功能	c=1 d=1 t=31
+gui ze 	规则	c=1 d=1 t=5
+hai shi 	还是	c=1 d=1 t=94
+hao 	浩	c=2 d=1.99005 t=47
+he xin 	核心	c=1 d=1 t=30
+hong dian 	红点	c=2 d=1.83527 t=40
+hou 	後	c=2 d=1.94649 t=78
+hou mian 	后面	c=1 d=1 t=70
+huang 	黃	c=3 d=2.97516 t=46
+huo qu 	获取	c=1 d=1 t=105
+jie kou 	接口	c=1 d=1 t=82
+jie shou dao 	接收到	c=1 d=1 t=73
+jiu 	就	c=0 d=0.1 t=17
+kai guan 	开关	c=1 d=1 t=84
+kan 	看	c=1 d=1 t=108
+ke hu duan 	客户端	c=1 d=1 t=66
+ke neng 	可能	c=1 d=1 t=103
+kuai jie jian 	快捷键	c=3 d=2.94099 t=25
+kuai su 	快速	c=1 d=1 t=146
+lai 	來	c=1 d=1 t=98
+li 	裏	c=0 d=0.1 t=37
+lu you 	路由	c=2 d=1.67032 t=88
+luo 	洛	c=1 d=1 t=134
+na bian 	那边	c=1 d=1 t=33
+na ge 	哪个	c=2 d=1.90032 t=112
+ni 	你	c=1 d=1 t=51
+pei zhi 	配置	c=3 d=2.90795 t=89
+pin dao 	频道	c=1 d=0.960708 t=37
+pin dao li 	频道裏	c=1 d=1 t=38
+pin yin 	拼音	c=1 d=1 t=144
+qi dong 	启动	c=1 d=1 t=65
+qi ta 	其他	c=1 d=1 t=57
+qie huan 	切换	c=4 d=3.89239 t=23
+qing qi qiu 	氢气球	c=1 d=1 t=80
+qing qiu 	请求	c=2 d=1.93707 t=81
+qu 	去	c=1 d=1 t=132
+qu 	取	c=2 d=1.91393 t=131
+quan bu 	全部	c=1 d=1 t=106
+sha 	啥	c=1 d=1 t=54
+shi 	是	c=4 d=3.35925 t=122
+shi ru 	驶入	c=1 d=1 t=147
+shu ju 	数据	c=1 d=1 t=115
+shu pai 	竖排	c=1 d=1 t=11
+shu ru 	输入	c=1 d=1 t=148
+shu xu guan 	鼠鬚管	c=0 d=0.1 t=17
+shu xu guan jiu 	鼠鬚管就	c=1 d=1 t=18
+suo you 	所有	c=1 d=1 t=140
+tiao zheng 	调整	c=2 d=1.9802 t=10
+tiao zhuan 	跳转	c=1 d=1 t=9
+tong bu 	同步	c=1 d=1 t=83
+tong guo 	通过	c=1 d=1 t=72
+tong zhi 	通知	c=3 d=2.80764 t=60
+wai mian 	外面	c=1 d=1 t=130
+wen 	問	c=1 d=1 t=53
+wen jian 	文件	c=1 d=1 t=92
+wen ti 	问题	c=1 d=1 t=55
+wo 	我	c=3 d=2.80719 t=127
+wo lai 	我来	c=1 d=1 t=95
+wo zhe bian 	我这边	c=1 d=1 t=34
+xiang 	想	c=1 d=1 t=117
+xiang guan 	相关	c=1 d=1 t=61
+xiang yao 	想要	c=1 d=1 t=52
+xiao xi 	消息	c=8 d=5.64302 t=125
+xiu gai 	修改	c=3 d=2.41672 t=87
+xu yao 	需要	c=1 d=1 t=104
+yi ci 	一次	c=1 d=1 t=69
+yong 	用	c=1 d=1 t=110
+you xie 	有些	c=1 d=1 t=101
+zai 	在	c=3 d=2.47334 t=118
+zai wo 	在我	c=1 d=1 t=63
+zhan shi 	展示	c=1 d=1 t=42
+zhe ge 	这个	c=1 d=1 t=124
+zhe li 	这里	c=2 d=1.74453 t=123
+zhe li shi 	这里是	c=1 d=1 t=90
+zhi fu 	支付	c=1 d=1 t=149
+zhong ying wen 	中英文	c=4 d=3.88259 t=24
+zhu yao 	主要	c=1 d=1 t=2
+zi fu 	字符	c=1 d=1 t=150
+zuo tian 	昨天	c=1 d=1 t=1

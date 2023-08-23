@@ -1,2 +1,6 @@
 var:
-  last_build_time: 1691772037
+  last_build_time: 1692424458
+  previously_selected_schema: terra_pinyin
+  schema_access_time:
+    rime_mint: 1692423550
+    terra_pinyin: 1692424379

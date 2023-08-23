@@ -1,0 +1,7 @@
+patch:
+  "style/color_scheme": lost_temple
+  "style/layout/corner_radius": 6
+  "us_keyboard_layout": true
+  "style/font_point": 16
+  "style/label_font_point": 12 # 候选词数字大小
+  "style/horizontal": false # 横向展示

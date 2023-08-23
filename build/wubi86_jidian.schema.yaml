@@ -1,14 +1,14 @@
 __build_info:
   rime_version: 1.8.5
   timestamps:
-    default: 1686057630
-    default.custom: 1692288612
-    key_bindings: 1686057630
+    default: 1675621991
+    default.custom: 1692464277
+    key_bindings: 1675621991
     key_bindings.custom: 0
-    punctuation: 1686057630
+    punctuation: 1675621991
     punctuation.custom: 0
     wubi86_jidian.custom: 0
-    wubi86_jidian.schema: 1692288613
+    wubi86_jidian.schema: 1692325270
 engine:
   filters:
     - "simplifier@tradition"
@@ -36,9 +36,13 @@ engine:
 key_binder:
   bindings:
     - {accept: "Control+Shift+E", toggle: es_conversion, when: always}
-    - {accept: bracketleft, send: Page_Up, when: paging}
-    - {accept: bracketright, send: Page_Down, when: has_menu}
+    - {accept: Tab, send: Page_Down, when: composing}
+    - {accept: "Shift+Tab", send: Page_Up, when: composing}
+    - {accept: equal, send: Page_Down, when: has_menu}
+    - {accept: minus, send: Page_Up, when: has_menu}
   import_preset: default
+  select_first_character: bracketleft
+  select_last_character: bracketright
 menu:
   page_size: 9
 punctuator:

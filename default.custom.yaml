@@ -1,15 +1,27 @@
 patch:
   "ascii_composer/good_old_caps_lock": true
   "ascii_composer/switch_key":
-    Caps_Lock: commit_code
-    Control_L: noop # 不做任何操作
-    Control_R: noop # 不做任何操作
-    Shift_L: commit_code
-    Shift_R: inline_ascii
-  "key_binder/bindings":
-    - {accept: "Control+Shift+E", toggle: es_conversion, when: always}
-    - {accept: bracketleft, send: Page_Up, when: paging}
-    - {accept: bracketright, send: Page_Down, when: has_menu}
+    Shift_L: noop # 不做任何操作
+    Shift_R: commit_code # macOS 上此项无效，Windows 可用右 Shift 切换中英输入
+    Control_L: noop
+    Control_R: noop # macOS 上此项无效，Windows 上可自行定义
+    Caps_Lock: commit_code # 
+    Eisu_toggle: clear
+  "key_binder":
+    select_first_character: "bracketleft" # lua 选词快捷键，选第一个字
+    select_last_character: "bracketright" # lua 选词快捷键，选最后一个字
+    bindings:
+      - {accept: "Control+Shift+E", toggle: es_conversion, when: always}
+      # Tab / Shift + Tab 翻页
+      - { when: composing, accept: Tab, send: Page_Down } # Tab 向下翻页
+      - { when: composing, accept: Shift+Tab, send: Page_Up } # Shift + Tab 向上翻页
+      # = / - 翻页
+      - { when: has_menu, accept: equal, send: Page_Down } # = 向下翻页
+      - { when: has_menu, accept: minus, send: Page_Up } # - 向上翻页
+      # 方向键翻页
+      # - {accept: bracketleft, send: Page_Up, when: paging}
+      # - {accept: bracketright, send: Page_Down, when: has_menu}
+
   "menu/page_size": 9
   schema_list:
     - {schema: rime_mint} # 薄荷拼音

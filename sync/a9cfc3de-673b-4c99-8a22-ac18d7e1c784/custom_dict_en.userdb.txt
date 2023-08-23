@@ -1,0 +1,9 @@
+# Rime user dictionary
+#@/db_name	custom_dict_en
+#@/db_type	userdb
+#@/rime_version	1.8.5
+#@/tick	7
+#@/user_id	a9cfc3de-673b-4c99-8a22-ac18d7e1c784
+export 	export	c=2 d=1.99005 t=4
+return 	return	c=1 d=1 t=7
+you 	you	c=2 d=1.9802 t=5

@@ -1,0 +1,163 @@
+# Rime user dictionary
+#@/db_name	custom_dict_terra
+#@/db_type	userdb
+#@/rime_version	1.8.5
+#@/tick	305
+#@/user_id	a9cfc3de-673b-4c99-8a22-ac18d7e1c784
+an4 jian4 	按键	c=1 d=1 t=1
+ban3 ben3 	版本	c=1 d=1 t=29
+ban3 ben3 hao4 	版本号	c=6 d=4.95636 t=123
+bang3 ding4 	绑定	c=1 d=1 t=2
+bao3 cun2 	保存	c=1 d=1 t=39
+bei4 	被	c=4 d=3.85673 t=124
+bian4 hua4 	变化	c=1 d=1 t=207
+bing4 	並	c=2 d=1.625 t=117
+bu4 	不	c=2 d=1.57695 t=257
+bu4 yi2 yang4 	不一样	c=1 d=1 t=137
+cha2 zhao3 	查找	c=1 d=1 t=174
+cheng2 gong1 	成功	c=1 d=1 t=251
+chu3 li3 	处理	c=2 d=1.66698 t=282
+chuan2 	傳	c=1 d=1 t=22
+cuo4 wu4 	错误	c=2 d=1.94649 t=283
+dai4 	帶	c=1 d=1 t=66
+dai4 ma3 	代码	c=1 d=1 t=221
+dan4 shi4 	但是	c=3 d=2.81931 t=107
+dang1 qian2 	当前	c=3 d=2.60128 t=223
+dao3 zhi4 	导致	c=1 d=1 t=99
+dao4 	到	c=2 d=1.29083 t=281
+de5 	的	c=19 d=12.2474 t=234
+di4 yi1 ci4 	第一次	c=2 d=1.9802 t=25
+dian3 	點	c=1 d=1 t=75
+diao4 le 	掉了	c=1 d=1 t=77
+dou1 hui4 	都会	c=2 d=1.69073 t=128
+dou1 you3 	都有	c=1 d=1 t=65
+e2 wai4 	额外	c=1 d=1 t=160
+en1 	恩	c=2 d=1.49164 t=162
+er2 wai4 	而外	c=1 d=1 t=159
+er3 ji1 	耳机	c=1 d=1 t=203
+er4 ci4 	二次	c=2 d=1.99501 t=244
+er4 ji2 	二级	c=3 d=2.82202 t=235
+fa1 sheng1 bian4 hua4 	发生变化	c=1 d=1 t=106
+fan3 hui2 	返回	c=4 d=2.56691 t=284
+fang1 fa3 	方法	c=1 d=1 t=92
+fang1 shi4 	方式	c=1 d=1 t=87
+fen1 zu3 	分组	c=3 d=2.78856 t=217
+gai3 	改	c=1 d=1 t=7
+gai3 le 	改了	c=1 d=1 t=14
+geng1 huan4 	更换	c=1 d=1 t=3
+geng1 xin1 	更新	c=3 d=2.83173 t=86
+guan1 bi4 	关闭	c=3 d=2.97516 t=304
+hao3 	好	c=1 d=1 t=30
+hao3 le 	好了	c=0 d=0.1 t=218
+hao4 	號	c=1 d=1 t=40
+he2 	和	c=1 d=1 t=88
+hou4 	後	c=0 d=0.172615 t=78
+huan3 cun2 	缓存	c=5 d=4.14214 t=114
+hui4 	會	c=1 d=1 t=142
+huo4 	或	c=1 d=1 t=279
+huo4 qu3 	获取	c=5 d=3.77628 t=232
+ji4 lu4 	记录	c=2 d=1.97045 t=49
+jian1 ting1 	监听	c=1 d=1 t=202
+jian3 cha2 	检查	c=1 d=1 t=33
+jian4 pan2 	键盘	c=1 d=1 t=6
+jian4 wei4 	键位	c=1 d=1 t=8
+jiao4 yan4 	校验	c=6 d=4.7693 t=294
+jie1 kou3 	接口	c=6 d=4.19404 t=153
+jie1 kou3 hou4 	接口後	c=1 d=1 t=79
+jie1 kou3 jiu4 	接口就	c=1 d=1 t=154
+jin3 jin3 	仅仅	c=1 d=1 t=148
+jin4 ru4 	进入	c=4 d=3.41566 t=258
+jiu4 	就	c=3 d=2.00514 t=153
+jiu4 shi4 	就是	c=1 d=1 t=156
+kai1 guan1 	开关	c=2 d=1.84519 t=150
+kai1 guan1 hou4 	开关後	c=1 d=1 t=15
+kan4 	看	c=1 d=1 t=152
+la1 	拉	c=1 d=1 t=143
+la1 yi1 xia4 	拉一下	c=1 d=1 t=220
+lan2 jie2 	拦截	c=1 d=1 t=249
+le5 	了	c=2 d=1.89137 t=126
+liang3 ge4 	两个	c=2 d=1.97531 t=132
+lie4 biao3 	列表	c=2 d=1.44933 t=173
+liu2 lan3 	浏览	c=2 d=1.96561 t=183
+liu2 lan3 qi4 	浏览器	c=1 d=1 t=70
+lu4 you2 	路由	c=8 d=6.67414 t=287
+luo2 you3 	羅有	c=1 d=1 t=246
+luo4 fei1 	洛菲	c=1 d=1 t=5
+mei2 sha2 	没啥	c=1 d=1 t=112
+mei2 you3 	没有	c=2 d=1.89583 t=118
+mei3 ci4 	每次	c=1 d=1 t=52
+ming4 ming2 	命名	c=1 d=1 t=155
+mou3 ge4 	某个	c=1 d=1 t=167
+mu4 lu4 	目录	c=1 d=1 t=299
+ni3 shi4 	你是	c=1 d=1 t=68
+pan4 duan4 	判断	c=1 d=1 t=269
+pei4 zhi4 	配置	c=5 d=4.11695 t=216
+pin2 dao4 	频道	c=11 d=9.4315 t=241
+qi2 shi2 	其实	c=1 d=1 t=110
+qi2 ta1 	其他	c=1 d=1 t=145
+qian2 	前	c=3 d=2.40251 t=266
+qian2 zhi4 	前置	c=1 d=1 t=268
+qie4 huan4 	切换	c=1 d=1 t=239
+qing1 kong1 	清空	c=4 d=3.78519 t=125
+qing3 qiu2 	请求	c=5 d=4.66133 t=53
+qu3 xiao1 	取消	c=1 d=1 t=273
+qu4 	去	c=1 d=1 t=157
+que4 ren4 	确认	c=1 d=1 t=245
+ru2 guo3 	如果	c=2 d=1.30422 t=270
+shang4 yi1 ci4 	上一次	c=1 d=1 t=48
+shang4 yi1 ye4 	上一页	c=2 d=1.96561 t=285
+shen2 me 	什么	c=1 d=1 t=69
+shi1 bai4 	失败	c=2 d=1.90484 t=276
+shi2 	時	c=1 d=1 t=45
+shi2 ti3 	实体	c=1 d=1 t=230
+shi4 	是	c=3 d=2.8606 t=149
+shi4 qing2 	事情	c=1 d=1 t=135
+shou3 wei4 	守卫	c=4 d=3.42625 t=293
+shua1 xin1 	刷新	c=1 d=1 t=63
+suo3 you3 	所有	c=2 d=1.96561 t=233
+tian1 jia1 	添加	c=1 d=1 t=286
+tiao4 zhuan3 	跳转	c=7 d=6.40347 t=300
+tiao4 zhuan3 zhi4 	跳转至	c=1 d=1 t=297
+tong1 guo4 	通过	c=2 d=1.23812 t=296
+tong2 yi1 ge4 	同一个	c=1 d=1 t=91
+wan2 quan2 	完全	c=2 d=1.99501 t=164
+wei2 	爲	c=1 d=1 t=56
+wei4 	未	c=1 d=1 t=295
+wei4 zhi4 	位置	c=1 d=1 t=4
+wen4 ti2 	问题	c=1 d=1 t=76
+wo3 zhe4 li3 	我这里	c=1 d=1 t=62
+wu3 bi3 	五笔	c=2 d=1.99005 t=305
+xia4 	下	c=1 d=1 t=170
+xie2 dai4 	携带	c=1 d=1 t=47
+xin1 	新	c=2 d=1.97045 t=259
+xin4 xi1 	信息	c=4 d=3.27734 t=238
+xiu1 gai3 	修改	c=4 d=3.93575 t=214
+xu1 yao4 	需要	c=1 d=1 t=242
+ye3 	也	c=1 d=1 t=111
+ye3 hui4 	也会	c=1 d=1 t=80
+yi1 ji2 	一级	c=5 d=4.20012 t=224
+yi1 xie1 	一些	c=3 d=2.61407 t=194
+yi1 zhong3 	一种	c=1 d=1 t=64
+yi2 zhi4 	一致	c=1 d=1 t=165
+yi3 qian2 	以前	c=2 d=1.956 t=140
+ying1 gai1 	应该	c=2 d=1.24798 t=218
+ying1 gai1 hao3 le 	应该好了	c=1 d=1 t=219
+ying3 xiang3 	影响	c=1 d=1 t=113
+yong4 	用	c=1 d=1 t=89
+you3 	有	c=3 d=1.68072 t=271
+yu3 yin1 	语音	c=1 d=1 t=240
+zai4 	在	c=1 d=1 t=263
+zhe4 ge4 	这个	c=7 d=5.46386 t=153
+zhe4 li3 	这里	c=1 d=1 t=71
+zhi1 hou4 	之后	c=1 d=1 t=31
+zhi1 qian2 	之前	c=1 d=1 t=72
+zhi2 jie1 	直接	c=1 d=1 t=289
+zhi3 ding4 	指定	c=1 d=1 t=298
+zhi3 shi4 	只是	c=1 d=1 t=121
+zhi4 	至	c=0 d=0.1 t=296
+zhuang4 tai4 	状态	c=1 d=1 t=151
+zu3 	組	c=1 d=1 t=12
+zu3 duan4 	阻断	c=1 d=1 t=291
+zui4 xin1 	最新	c=1 d=1 t=58
+zuo4 de 	做的	c=1 d=1 t=134
+zuo4 yi1 xie1 	做一些	c=1 d=1 t=267

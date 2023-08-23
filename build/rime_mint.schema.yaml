@@ -1,28 +1,18 @@
 __build_info:
   rime_version: 1.8.5
   timestamps:
-    code_limit: 1692288612
+    code_limit: 1692325269
     code_limit.custom: 0
-    default: 1686057630
-    default.custom: 1692288612
-    key_bindings: 1686057630
+    default: 1675621991
+    default.custom: 1692464277
+    key_bindings: 1675621991
     key_bindings.custom: 0
-    punctuation: 1686057630
+    punctuation: 1675621991
     punctuation.custom: 0
-    rime_mint.custom: 1692288613
-    rime_mint.schema: 1692288613
-    symbols: 1692288613
+    rime_mint.custom: 1692325270
+    rime_mint.schema: 1692464294
+    symbols: 1692325270
     symbols.custom: 0
-chaizi:
-  comment_format:
-    - "xform/([nljqxy])v/$1ü/"
-  dictionary: chaizi
-  enable_completion: true
-  preedit_format:
-    - "xform/([nljqxy])v/$1ü/"
-  prefix: u
-  tag: chaizi
-  tips: "〔拆字〕"
 code:
   length_limit: 25
 emoji_suggestion:
@@ -35,9 +25,8 @@ engine:
     - simplifier
     - uniquifier
   processors:
-    - ascii_composer
-    - "lua_processor@code_length_limit_processor@code"
     - recognizer
+    - "lua_processor@code_length_limit_processor@code"
     - key_binder
     - speller
     - punctuator
@@ -67,9 +56,13 @@ engine:
 key_binder:
   bindings:
     - {accept: "Control+Shift+E", toggle: es_conversion, when: always}
-    - {accept: bracketleft, send: Page_Up, when: paging}
-    - {accept: bracketright, send: Page_Down, when: has_menu}
+    - {accept: Tab, send: Page_Down, when: composing}
+    - {accept: "Shift+Tab", send: Page_Up, when: composing}
+    - {accept: equal, send: Page_Down, when: has_menu}
+    - {accept: minus, send: Page_Up, when: has_menu}
   import_preset: default
+  select_first_character: bracketleft
+  select_last_character: bracketright
 melt_eng:
   dictionary: custom_dict_en.all
   enable_completion: false
@@ -127,7 +120,7 @@ punctuator:
     ",": {commit: "，"}
     "-": "-"
     .: ["。"]
-    "/": ["/", "÷"]
+    "/": ["//", "/", "÷"]
     ":": {commit: "："}
     ";": {commit: "；"}
     "<": ["《", "〈", "«", "<"]
@@ -445,13 +438,6 @@ reduce_english_filter:
     - lid
     - gem
     - tin
-reverse_lookup:
-  dictionary: luna_pinyin
-  overwrite_comment: true
-  tags:
-    - wubi86_jidian
-    - stroke
-    - chaizi
 schema:
   author:
     - "mintimate < @Mintimate|https://www.mintimate.cn >"
@@ -532,15 +518,6 @@ speller:
     - "derive/ong$/on/"
     - "derive/([tl])eng$/$1en/"
     - "derive/([qwrtypsdfghjklzxcbnm])([aeio])ng$/$1ng/"
-stroke:
-  dictionary: stroke
-  enable_user_dict: false
-  preedit_format:
-    - "xlit/hspnz/一丨丿丶乙/"
-  prefix: i
-  suffix: "'"
-  tag: stroke
-  tips: "〔笔画〕"
 switches:
   - name: ascii_mode
     reset: 0
@@ -562,11 +539,3 @@ translator:
     - "xform/([nl])v/$1ü/"
     - "xform/([nl])ue/$1üe/"
     - "xform/([jqxy])v/$1u/"
-wubi86_jidian:
-  dictionary: wubi86_jidian
-  enable_completion: true
-  enable_user_dict: false
-  prefix: "`"
-  suffix: "'"
-  tag: wubi86_jidian
-  tips: "〔五笔〕"

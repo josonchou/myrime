@@ -1,56 +1,18 @@
 __build_info:
   rime_version: 1.8.5
   timestamps:
-    default: 1686057630
-    default.custom: 1692288612
-    grammar: 0
-    key_bindings: 1686057630
+    default: 1675621991
+    default.custom: 1692464277
+    grammar: 1675621991
+    grammar.custom: 0
+    key_bindings: 1675621991
     key_bindings.custom: 0
-    punctuation: 1686057630
+    punctuation: 1675621991
     punctuation.custom: 0
-    terra_pinyin.custom: 1692288613
-    terra_pinyin.schema: 1686057632
-    terra_symbols: 1692288613
+    terra_pinyin.custom: 1692464285
+    terra_pinyin.schema: 1675621991
+    terra_symbols: 1692325270
     terra_symbols.custom: 0
-chaizi:
-  comment_format:
-    - "xform/([nljqxy])v/$1ü/"
-    - "xform ([aeiou])(ng?|r)([1234]) $1$3$2"
-    - "xform ([aeo])([iuo])([1234]) $1$3$2"
-    - "xform a1 ā"
-    - "xform a2 á"
-    - "xform a3 ǎ"
-    - "xform a4 à"
-    - "xform e1 ē"
-    - "xform e2 é"
-    - "xform e3 ě"
-    - "xform e4 è"
-    - "xform o1 ō"
-    - "xform o2 ó"
-    - "xform o3 ǒ"
-    - "xform o4 ò"
-    - "xform i1 ī"
-    - "xform i2 í"
-    - "xform i3 ǐ"
-    - "xform i4 ì"
-    - "xform u1 ū"
-    - "xform u2 ú"
-    - "xform u3 ǔ"
-    - "xform u4 ù"
-    - "xform v1 ǖ"
-    - "xform v2 ǘ"
-    - "xform v3 ǚ"
-    - "xform v4 ǜ"
-    - "xform/([nljqxy])v/$1ü/"
-    - "xform/eh[0-5]?/ê/"
-    - "xform/([a-z]+)[0-5]/$1/"
-  dictionary: chaizi
-  enable_completion: true
-  preedit_format:
-    - "xform/([nljqxy])v/$1ü/"
-  prefix: u
-  tag: chaizi
-  tips: "〔拆字〕"
 custom_phrase:
   db_class: stabledb
   dictionary: ""
@@ -67,7 +29,6 @@ engine:
     - simplifier
     - uniquifier
   processors:
-    - ascii_composer
     - recognizer
     - key_binder
     - speller
@@ -95,17 +56,23 @@ engine:
     - "reverse_lookup_translator@chaizi"
     - "reverse_lookup_translator@stroke"
     - script_translator
+grammar:
+  language: "zh-hant-t-essay-bgw"
 key_binder:
   bindings:
     - {accept: "Control+Shift+E", toggle: es_conversion, when: always}
-    - {accept: bracketleft, send: Page_Up, when: paging}
-    - {accept: bracketright, send: Page_Down, when: has_menu}
+    - {accept: Tab, send: Page_Down, when: composing}
+    - {accept: "Shift+Tab", send: Page_Up, when: composing}
+    - {accept: equal, send: Page_Down, when: has_menu}
+    - {accept: minus, send: Page_Up, when: has_menu}
     - {accept: minus, send: minus, when: has_menu}
     - {accept: minus, send: Page_Up, when: paging}
   import_preset: default
+  select_first_character: bracketleft
+  select_last_character: bracketright
 melt_eng:
   dictionary: custom_dict_en.all
-  enable_completion: false
+  enable_completion: true
   enable_sentence: false
   initial_quality: 0.8
 menu:
@@ -114,8 +81,22 @@ punctuator:
   full_shape:
     "/": ["／", "÷"]
   half_shape:
+    "#": "#"
+    "$": ["¥", "$", "€", "£", "¢", "¤"]
+    "'": {pair: ["「", "」"]}
+    "*": "*"
     .: ["。"]
-    "/": ["､", "/", "／", "÷"]
+    "/": ["//", "/", "÷"]
+    "<": ["《", "〈", "«", "<"]
+    "=": "="
+    ">": ["》", "〉", "»", ">"]
+    "@": "@"
+    "[": ["【", "["]
+    "\\": "、"
+    "]": ["】", "]"]
+    _: "──"
+    "`": "`"
+    "~": "~"
   import_preset: terra_symbols
   symbols:
     "/0": ["〇", "零", "₀", "⁰", "⓪", "⓿", "０"]
@@ -329,11 +310,43 @@ recognizer:
     url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"
     wubi86_jidian: "`[a-z]*'?$"
 reverse_lookup:
-  overwrite_comment: false
-  tags:
-    - wubi86_jidian
-    - stroke
-    - chaizi
+  comment_format:
+    - "xform ([aeiou])(ng?|r)([1234]) $1$3$2"
+    - "xform ([aeo])([iuo])([1234]) $1$3$2"
+    - "xform a1 ā"
+    - "xform a2 á"
+    - "xform a3 ǎ"
+    - "xform a4 à"
+    - "xform e1 ē"
+    - "xform e2 é"
+    - "xform e3 ě"
+    - "xform e4 è"
+    - "xform o1 ō"
+    - "xform o2 ó"
+    - "xform o3 ǒ"
+    - "xform o4 ò"
+    - "xform i1 ī"
+    - "xform i2 í"
+    - "xform i3 ǐ"
+    - "xform i4 ì"
+    - "xform u1 ū"
+    - "xform u2 ú"
+    - "xform u3 ǔ"
+    - "xform u4 ù"
+    - "xform v1 ǖ"
+    - "xform v2 ǘ"
+    - "xform v3 ǚ"
+    - "xform v4 ǜ"
+    - "xform/([nljqxy])v/$1ü/"
+    - "xform/eh[0-5]?/ê/"
+    - "xform/([a-z]+)[0-5]/$1/"
+  dictionary: stroke
+  enable_completion: true
+  preedit_format:
+    - "xlit/hspnz/一丨丿丶乙/"
+  prefix: "`"
+  suffix: "'"
+  tips: "〔筆畫〕"
 schema:
   author:
     - "佛振 <chen.sst@gmail.com>"
@@ -386,46 +399,6 @@ speller:
   alphabet: "zyxwvutsrqponmlkjihgfedcba-;/<,>\\"
   delimiter: " '"
   initials: zyxwvutsrqponmlkjihgfedcba
-stroke:
-  comment_format:
-    - "xform/([nl])v/$1ü/"
-    - "xform ([aeiou])(ng?|r)([1234]) $1$3$2"
-    - "xform ([aeo])([iuo])([1234]) $1$3$2"
-    - "xform a1 ā"
-    - "xform a2 á"
-    - "xform a3 ǎ"
-    - "xform a4 à"
-    - "xform e1 ē"
-    - "xform e2 é"
-    - "xform e3 ě"
-    - "xform e4 è"
-    - "xform o1 ō"
-    - "xform o2 ó"
-    - "xform o3 ǒ"
-    - "xform o4 ò"
-    - "xform i1 ī"
-    - "xform i2 í"
-    - "xform i3 ǐ"
-    - "xform i4 ì"
-    - "xform u1 ū"
-    - "xform u2 ú"
-    - "xform u3 ǔ"
-    - "xform u4 ù"
-    - "xform v1 ǖ"
-    - "xform v2 ǘ"
-    - "xform v3 ǚ"
-    - "xform v4 ǜ"
-    - "xform/([nljqxy])v/$1ü/"
-    - "xform/eh[0-5]?/ê/"
-    - "xform/([a-z]+)[0-5]/$1/"
-  dictionary: stroke
-  enable_user_dict: false
-  preedit_format:
-    - "xlit/hspnz/一丨丿丶乙/"
-  prefix: i
-  suffix: "'"
-  tag: stroke
-  tips: "〔笔画〕"
 switches:
   - name: ascii_mode
     reset: 0
@@ -505,41 +478,3 @@ translator:
     - "xform ü[<,] ǚ"
     - "xform ü[>\\\\] ǜ"
   spelling_hints: 3
-wubi86_jidian:
-  comment_format:
-    - "xform ([aeiou])(ng?|r)([1234]) $1$3$2"
-    - "xform ([aeo])([iuo])([1234]) $1$3$2"
-    - "xform a1 ā"
-    - "xform a2 á"
-    - "xform a3 ǎ"
-    - "xform a4 à"
-    - "xform e1 ē"
-    - "xform e2 é"
-    - "xform e3 ě"
-    - "xform e4 è"
-    - "xform o1 ō"
-    - "xform o2 ó"
-    - "xform o3 ǒ"
-    - "xform o4 ò"
-    - "xform i1 ī"
-    - "xform i2 í"
-    - "xform i3 ǐ"
-    - "xform i4 ì"
-    - "xform u1 ū"
-    - "xform u2 ú"
-    - "xform u3 ǔ"
-    - "xform u4 ù"
-    - "xform v1 ǖ"
-    - "xform v2 ǘ"
-    - "xform v3 ǚ"
-    - "xform v4 ǜ"
-    - "xform/([nljqxy])v/$1ü/"
-    - "xform/eh[0-5]?/ê/"
-    - "xform/([a-z]+)[0-5]/$1/"
-  dictionary: wubi86_jidian
-  enable_completion: true
-  enable_user_dict: false
-  prefix: "`"
-  suffix: "'"
-  tag: wubi86_jidian
-  tips: "〔五笔〕"

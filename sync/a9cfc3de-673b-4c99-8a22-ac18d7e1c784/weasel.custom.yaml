@@ -1,8 +1,19 @@
-customization:
-  distribution_code_name: Weasel
-  distribution_version: 0.15.0.0
-  generator: "Weasel::UIStyleSettings"
-  modified_time: "Sat Aug 12 00:22:14 2023"
-  rime_version: 1.8.5
 patch:
+  app_options/cmd.exe:           #特定程序使用指定输入法(英文)
+    ascii_mode: true             #应用名称在进程查看
+  app_options/photoshop.exe:
+    ascii_mode: true
+  app_options/idea64.exe:
+    ascii_mode: true
+  app_options/pycharm64.exe:
+    ascii_mode: true
+  app_options/Code.exe:
+    ascii_mode: true
+  app_options/WindowsTerminal.exe:
+    ascii_mode: true
   "style/color_scheme": lost_temple
+  "style/layout/corner_radius": 6
+  "us_keyboard_layout": true
+  "style/font_point": 16
+  "style/label_font_point": 12 # 候选词数字大小
+  "style/horizontal": false # 横向展示
