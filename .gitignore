@@ -11,3 +11,5 @@ build
 
 # 自定义文件
 *.custom.yaml
+
+_rsync
