@@ -157,7 +157,7 @@ key_binder:
     - { when: always, accept: Control+Shift+3, toggle: full_shape } # 切换全角/半角
     - { when: always, accept: Control+Shift+4, toggle: simplification } # 切换简体/繁体
     - { when: always, accept: Control+Shift+5, toggle: extended_charset } # 切换扩展字符
-    # - { when: always, accept: Shift+space, toggle: full_shape } # 另一种切换全角/半角的方式
+    - { when: always, accept: Shift+space, toggle: full_shape } # 另一种切换全角/半角的方式
     - { when: always, accept: Control+period, toggle: ascii_punct } # 切换中/西文标点
 
 recognizer:
@@ -169,10 +169,10 @@ recognizer:
 ascii_composer:
   # 定义切换到西文模式的快捷键
   switch_key:
-    Caps_Lock: noop  # 按下 Caps Lock 会直接上屏
+    Caps_Lock: commit_code  # 按下 Caps Lock 会直接上屏
     Control_L: noop  # 按下左 Control 键不做任何操作
     Control_R: noop  # 按下右 Control 键不做任何操作
-    Shift_L: noop  # 按下左 Shift 键会直接上屏
-    Shift_R: commit_code  # 按下右 Shift 键会临时切换到西文模式
+    Shift_L: commit_code  # 按下左 Shift 键会直接上屏
+    Shift_R: noop  # 按下右 Shift 键会临时切换到西文模式
   good_old_caps_lock: true  # 启用经典的 Caps Lock 开启西文模式的方式
 
