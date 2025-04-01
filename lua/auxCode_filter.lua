@@ -32,14 +32,14 @@ function AuxFilter.init(env)
     env.trigger_key_string = alt_lua_punc( env.trigger_key )
     
     -- 设定是否显示辅助码，默认为显示
-    env.show_aux_notice = config:get_string("axu_code/show_aux_notice") or 'always'
+    env.show_aux_notice = config:get_string("axu_code/show_aux_notice") or "always"
 
     ----------------------------
     -- 持續選詞上屏，保持輔助碼分隔符存在 --
     ----------------------------
     env.notifier = engine.context.select_notifier:connect(function(ctx)
         -- 含有輔助碼分隔符才處理
-        if not string.find(ctx.input, env.trigger_key_string) then
+        if not string.find(ctx.input, env.trigger_key_string) and env.show_aux_notice ~= "always" then
             return
         end
 
@@ -78,6 +78,9 @@ end
 ----------------
 function AuxFilter.readAuxTxt(txtpath)
     --log.info("** AuxCode filter", 'read Aux code txt:', txtpath)
+    if AuxFilter.cache then
+        return AuxFilter.cache
+    end
 
     local defaultFile = 'ZRM_Aux-code_4.3.txt'
     local userPath = rime_api.get_user_data_dir() .. "/lua/aux_code/"
@@ -104,7 +107,8 @@ function AuxFilter.readAuxTxt(txtpath)
     --     log.info(key, table.concat(value, ','))
     -- end
 
-    return auxCodes
+    AuxFilter.cache = auxCodes
+    return AuxFilter.cache
 end
 
 -- local function getUtf8CharLength(byte)
@@ -205,7 +209,7 @@ function AuxFilter.func(input, env)
     local auxStr = ''
 
     -- 判断字符串中是否包含輔助碼分隔符
-    if not string.find(inputCode, env.trigger_key_string) then
+    if not string.find(inputCode, env.trigger_key_string) and env.show_aux_notice ~= "always" then
         -- 没有输入辅助码引导符，则直接yield所有待选项，不进入后续迭代，提升性能
         for cand in input:iter() do
             yield(cand)
@@ -245,11 +249,11 @@ function AuxFilter.func(input, env)
                         originalCand.comment .. shadowComment .. '(' .. codeComment .. ')')
                 elseif env.show_aux_notice == "trigger" then
                     if string.find(inputCode,env.trigger_key_string) then
-                        cand.comment = '(' .. codeComment .. ')'
+                        cand.comment = cand.comment .. '(' .. codeComment .. ')'
                     end
                 else
                     -- 其他情况直接给注释添加辅助代码
-                    cand.comment = '(' .. codeComment .. ')'
+                    cand.comment = cand.comment .. '(' .. codeComment .. ')'
                 end
             end
 

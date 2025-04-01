@@ -1,4 +1,4 @@
-![style](demo.webp)
+![style](https://www.mintimate.cc/image/demo/guide.webp)
 
 - [中文 - 简体简介](README.md)
 - [中文 - 繁體簡介](README_zh-CHT.md)
@@ -72,6 +72,10 @@ With the Hamster input method, how is the 9-grid input used?
 
 Inside the Oh-my-rime, the 9-grid layout has been adapted from Hamster's [9-grid arrangement](https://github.com/imfuxiao/Hamster/) and the [rime-ice's 9-grid](https://github.com/iDvel/rime-ice/blob/main/t9.schema.yaml). To utilize the 9-grid input, both the 9-grid scheme (set under Input Scheme settings) and the 9-grid layout (键盘设置 - 键盘布局 - 中文 9 键) need to be enabled simultaneously.
 
+If you like to use Rime to type long sentences, it is strongly recommended to use it with a language model. Reference tutorial:
+- [How to Configure Language Model in Rime -- Oh-my-rime Configuration Tutorial](https://www.mintimate.cc/en/guide/languageModel.html)
+
+
 ## Configuration file description
 
 - `default.yaml` set the input method, how to switch the input method, turn the page, etc.
@@ -84,7 +88,8 @@ Most of the configuration files are commented. Cooperate with the tutorial: [Con
 
 The dictionary directory [dicts](dicts) in this repository consists of the following:
 
-- [Rime Ice Pinyin Dictionary](https://github.com/iDvel/rime-ice)
+- [Rime-ice Pinyin Dictionary](https://github.com/iDvel/rime-ice)
+- [Rime-frost Pinyin Dictionary](https://github.com/gaboolic/rime-frost)
 - [98 Wubi Dictionary](https://github.com/yanhuacuo/98wubi-tables)
 - [86 Wubi Dictionary](https://github.com/KyleBing/rime-wubi86-jidian)
 
@@ -93,18 +98,18 @@ Detailed explanation:
 dicts
 ├── custom_simple.dict.yaml    # Custom dictionary (suggested for adding your own dictionaries)
 ├── other_emoji.dict.yaml      # Emoji dictionary
-├── other_kaomoji.dict.yaml    # Kaomoji (facial expressions) dictionary (activated by `vv`)
-├── rime_ice.41448.dict.yaml   # Rime Ice dictionary (automatically updated by GitHub Action)
-├── rime_ice.8105.dict.yaml    # Rime Ice dictionary (automatically updated by GitHub Action)
-├── rime_ice.base.dict.yaml    # Rime Ice dictionary (automatically updated by GitHub Action)
-├── rime_ice.ext.dict.yaml     # Rime Ice dictionary (automatically updated by GitHub Action)
-├── rime_ice.cn_en.txt         # Rime Ice dictionary (automatically updated by GitHub Action)
-├── rime_ice.en.dict.yaml      # Rime Ice dictionary (automatically updated by GitHub Action)
-├── rime_ice.en_ext.dict.yaml  # Rime Ice dictionary (automatically updated by GitHub Action)
-├── rime_ice.others.dict.yaml  # Rime Ice dictionary (automatically updated by GitHub Action)
+├── other_kaomoji.dict.yaml    # Kaomoji (facial expressions) dictionary (activated by `VV`)
+├── rime_ice.41448.dict.yaml   # Rime frost dictionary (automatically updated by GitHub Action)
+├── rime_ice.8105.dict.yaml    # Rime frost dictionary (automatically updated by GitHub Action)
+├── rime_ice.base.dict.yaml    # Rime frost dictionary (automatically updated by GitHub Action)
+├── rime_ice.ext.dict.yaml     # Rime frost dictionary (automatically updated by GitHub Action)
+├── rime_ice.cn_en.txt         # Rime frost dictionary (automatically updated by GitHub Action)
+├── rime_ice.en.dict.yaml      # Rime frost dictionary (automatically updated by GitHub Action)
+├── rime_ice.en_ext.dict.yaml  # Rime frost dictionary (automatically updated by GitHub Action)
+├── rime_ice.others.dict.yaml  # Rime frost dictionary (automatically updated by GitHub Action)
 ├── terra_pinyin_base.dict.yaml     # Terra Pinyin default dictionary
 ├── terra_pinyin_ext.dict.yaml      # Terra Pinyin default dictionary
-├── terra_rime_ice.base.dict.yaml   # Terra Rime Ice dictionary based on Python script conversion and automatic updating
+├── terra_rime_ice.base.dict.yaml   # Terra Rime frost dictionary based on Python script conversion and automatic updating
 ├── wubi86_core.dict.yaml           # 86 Wubi basic dictionary
 └── wubi98_base.dict.yaml           # 98 Wubi basic dictionary
 ```
@@ -119,13 +124,13 @@ name: rime_mint                  # Make sure the name matches the file name
 version: "2024.02.11"
 sort: by_weight
 # This section is for the dictionaries used by the input method to supplement and expand the vocabulary
-# Rime Ice Pinyin Dictionary, automatically updated by GitHub Robot
+# Rime frost Pinyin Dictionary, automatically updated by GitHub Robot
 import_tables:
   - dicts/custom_simple          # Custom
-  - dicts/rime_ice.8105          # Rime Ice commonly used character collection
-  - dicts/rime_ice.41448         # Rime Ice complete character collection
-  - dicts/rime_ice.base          # Rime Ice https://github.com/iDvel/rime-ice
-  - dicts/rime_ice.ext           # Rime Ice https://github.com/iDvel/rime-ice
+  - dicts/rime_ice.8105          # Rime frost commonly used character collection
+  - dicts/rime_ice.41448         # Rime frost complete character collection
+  - dicts/rime_ice.base          # Rime frost https://github.com/gaboolic/rime-frost
+  - dicts/rime_ice.ext           # Rime frost https://github.com/gaboolic/rime-frost
   - dicts/other_kaomoji          # Kaomoji (facial expressions) (activated by `vv`)
   - dicts/other_emoji            # Emoji (supplementary, actual usage usually requires OpenCC)
   - dicts/rime_ice.others        # Rime Ice others dictionary (used for automatic error correction)
@@ -151,6 +156,8 @@ import_tables:
 5. [rime-radical-pinyin | Rime Component-based Character Input Schemes (Full Spelling and Double Pinyin)](https://github.com/mirtlecn/rime-radical-pinyin)
 6. [rime-wubi86-jidian](https://github.com/KyleBing/rime-wubi86-jidian)
 7. [Extending RIME with Lua scripts](https://github.com/hchunhui/librime-lua/wiki/Scripting)
+8. [rime-frost | Based on a remastered Rime-ice Pinyin, that is more pure, more accurate in word frequency, and more intelligent.](https://github.com/gaboolic/rime-frost)
+
 
 > Especially rime-ice, this solution project, a large number of references to rime-ice. For the word library part, use Python to synchronize the basic word library of rime-ice and enable the ext extension word library that rime-ice does not enable by default.
 
