@@ -13,3 +13,4 @@ build
 *.custom.yaml
 
 _rsync
+rsync
