@@ -27,7 +27,7 @@ show_notifications_when: appropriate
 style:
   # 选择皮肤，亮色与暗色主题
   color_scheme: mint_light_blue
-  color_scheme_dark: mint_dark_blue
+  color_scheme_dark: solarized_dark
 
   # 预设选项。如果皮肤没写，则使用这些属性；如果皮肤写了，使用皮肤的。
   
@@ -38,7 +38,7 @@ style:
   
   text_orientation: horizontal  # horizontal | vertical
   # 内嵌预编辑
-  inline_preedit: true
+  inline_preedit: false
   inline_candidate: false
   
   # 展示分页
@@ -78,7 +78,6 @@ style:
   # 注字体及大小
   comment_font_face: 'PingFang SC'
   comment_font_point: 14
-
 
 preset_color_schemes:
   mint_light_blue:
@@ -442,3 +441,55 @@ preset_color_schemes:
     hilited_candidate_label_color: 0xCC8947 #Lab 55 ,-10,-45
     hilited_comment_text_color: 0x289989    #Lab 60 ,-20, 65
     hilited_text_color: 0xBE706D            #Lab 50 , 15,-45
+app_options:
+  dev.warp.Warp-Stable:
+    ascii_mode: true
+    no_inline: true
+  com.microsoft.VSCode:
+    ascii_mode: true
+    no_inline: true
+  com.apple.Spotlight:
+    ascii_mode: true
+  com.alfredapp.Alfred:
+    ascii_mode: true
+  com.runningwithcrayons.Alfred-2:
+    ascii_mode: true
+  com.blacktree.Quicksilver:
+    ascii_mode: true
+  com.apple.Terminal:
+    ascii_mode: true
+    no_inline: true
+  com.googlecode.iterm2:
+    ascii_mode: true
+    no_inline: true
+  org.vim.MacVim:
+    ascii_mode: true  # 初始爲西文模式
+    no_inline: true   # 不使用行內編輯
+    vim_mode: true    # 退出VIM插入模式自動切換輸入法狀態
+  com.apple.dt.Xcode:
+    ascii_mode: true
+  com.barebones.textwrangler:
+    ascii_mode: true
+  com.macromates.TextMate.preview:
+    ascii_mode: true
+  com.github.atom:
+    ascii_mode: true
+  com.sublimetext.2:
+    ascii_mode: true
+  org.gnu.Aquamacs:
+    ascii_mode: true
+  org.gnu.Emacs:
+    ascii_mode: true
+    no_inline: true
+  co.zeit.hyper:
+    ascii_mode: true
+  com.google.Chrome:
+    # 規避 https://github.com/rime/squirrel/issues/435
+    inline: true
+  com.microsoft.edgemac:
+    # 規避 https://github.com/rime/squirrel/issues/906
+    inline: true
+  ru.keepcoder.Telegram:
+    # 規避 https://github.com/rime/squirrel/issues/475
+    inline: true
+    
