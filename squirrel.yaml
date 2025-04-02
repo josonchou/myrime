@@ -492,4 +492,7 @@ app_options:
   ru.keepcoder.Telegram:
     # 規避 https://github.com/rime/squirrel/issues/475
     inline: true
+  dev.zed.Zed:
+    no_inline: true
+    ascii_mode: true
     
