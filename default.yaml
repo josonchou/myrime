@@ -7,10 +7,10 @@ config_version: "24.03.24"
 # 以下内容，实际会由default.custom.yaml和方案配置所覆写
 ## 九宫格依赖于 rime_mint ，如果需要使用其他方案（比如: 小鹤双拼的 九宫格），可以使用 custom 文件覆写
 schema_list:
+  - schema: terra_pinyin         # 地球拼音-薄荷定制
   - schema: rime_mint            # 薄荷拼音
   - schema: double_pinyin_flypy  # 小鹤双拼
   - schema: rime_mint_flypy      # 薄荷拼音-小鹤混输方案
-  - schema: terra_pinyin         # 地球拼音-薄荷定制
   - schema: wubi98_mint          # 五笔98-五笔小筑
   - schema: wubi86_jidian        # 五笔86-极点86
   - schema: t9                   # 仓九宫格-全拼输入
@@ -141,10 +141,12 @@ key_binder:
     - { when: composing, accept: Alt+v, send: Page_Up }          # 翻页
     - { when: composing, accept: Control+v, send: Page_Down }
     - { when: composing, accept: Caps_Lock, send: Escape }
+    - { when: always, accept: Escape, set_option: ascii_mode } # Esc 键切换西文模式
     # 按词移动光标
     - { when: composing, accept: ISO_Left_Tab, send: Shift+Left } # ISO_Left_Tab 是 Shift+Tab
     - { when: composing, accept: Shift+Tab, send: Shift+Left }
     - { when: composing, accept: Tab, send: Shift+Right }
+    
     - { when: always, accept: Caps_Lock, set_option: ascii_mode } # Caps Lock 键切换中/西文模式
     # 翻页
     - { when: paging, accept: minus, send: Page_Up }             # 编码窗口翻页
@@ -174,7 +176,7 @@ ascii_composer:
   # 定义切换到西文模式的快捷键
   switch_key:
     Caps_Lock: noop # 按下 Caps Lock 键不做任何操作
-    Control_L: inline_ascii  # 按下左 Control 键会临时切换到西文模式
+    Control_L: noop  # 按下左 Control 键会临时切换到西文模式
     Control_R: noop  # 按下右 Control 键不做任何操作
     Shift_L: noop  # 按下左 Shift 键不做任何操作
     Shift_R: commit_code  # 按下右 Shift 键会直接上屏
