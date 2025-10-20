@@ -497,6 +497,9 @@ app_options:
     ascii_mode: true
   neovide:
     ascii_mode: true
-  net.kovidgoyal.kitty::
+  net.kovidgoyal.kitty:
     ascii_mode: true
     inline: true
+  com.huawei.devecostudio.ds:
+    ascii_mode: true 
+
