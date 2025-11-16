@@ -1,0 +1,8 @@
+customization:
+  distribution_code_name: Weasel
+  distribution_version: 0.16.3
+  generator: "Weasel::UIStyleSettings"
+  modified_time: "Thu Jan 30 17:57:12 2025"
+  rime_version: 1.11.2
+patch:
+  "style/color_scheme": dota_2

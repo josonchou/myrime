@@ -1,0 +1,15 @@
+customization:
+  distribution_code_name: hamster
+  distribution_version: ""
+  generator: "Rime::SwitcherSettings"
+  modified_time: "Tue Apr  1 20:39:16 2025"
+  rime_version: 1.13.1
+patch:
+  schema_list:
+    - {schema: t9}
+    - {schema: double_pinyin_flypy}
+    - {schema: rime_mint_flypy}
+    - {schema: terra_pinyin}
+    - {schema: wubi98_mint}
+    - {schema: wubi86_jidian}
+    - {schema: rime_mint}
