@@ -178,6 +178,6 @@ ascii_composer:
     Caps_Lock: noop # 按下 Caps Lock 键不做任何操作
     Control_L: noop # 按下左 Control 键会临时切换到西文模式
     Control_R: noop # 按下右 Control 键不做任何操作
-    Shift_L: noop # 按下左 Shift 键不做任何操作
+    Shift_L: commit_code # 按下左 Shift 键不做任何操作
     Shift_R: commit_code # 按下右 Shift 键会直接上屏
   good_old_caps_lock: true # 启用经典的 Caps Lock 开启西文模式的方式

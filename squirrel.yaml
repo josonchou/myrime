@@ -17,7 +17,7 @@ config_version: "2024-09-14"
 # default: 美国 (ABC) 键盘布局
 # _custom_: 您选择的键盘布局, 例如 'com.apple.keylayout.USExtended' 或简单的 'USExtended'
 # keyboard_layout: default
-keyboard_layout: 'com.apple.keylayout.UnicodeHexInput'
+keyboard_layout: "com.apple.keylayout.UnicodeHexInput"
 
 # for veteran chord-typist
 chord_duration: 0.1 # seconds
@@ -491,7 +491,8 @@ app_options:
     # 規避 https://github.com/rime/squirrel/issues/475
     inline: true
   dev.zed.Zed:
-    no_inline: true
+    inline: true
+    # no_inline: true
     ascii_mode: true
   com.neovide.neovide:
     ascii_mode: true
@@ -501,5 +502,4 @@ app_options:
     ascii_mode: true
     inline: true
   com.huawei.devecostudio.ds:
-    ascii_mode: true 
-
+    ascii_mode: true
