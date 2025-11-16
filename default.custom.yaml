@@ -1,0 +1,11 @@
+customization:
+  distribution_code_name: hamster
+  distribution_version: ""
+  generator: "Rime::SwitcherSettings"
+  modified_time: "Sun Nov 16 22:55:24 2025"
+  rime_version: 1.14.0
+patch:
+  schema_list:
+    - {schema: rime_ice}
+    - {schema: t9}
+    - {schema: double_pinyin_mspy}
