@@ -177,7 +177,7 @@ reduce_english_filter:
     pac, paid, pail, pain, pair, pak, pal, pam, pans, pant, pap, par, pat, paw, pax, pens, pic, pier, pies, pins, pint, pit, pix, pod, pop, pos, pot, pour, pow, pub,
     rand, rant, rent, rep, res, ret, rex, rib, rid, rig, rim, rub, rug, rum, runc, runs,
     sac, sail, sal, sam, sans, sap, saw, sax, sew, sham, shaw, shin, sig, sin, sip, sis, suit, sung, suns, sup, sur, sus,
-    tad, tail, taj, tar, tax, tec, ted, tel, ter, tex, tic, tied, tier, ties, tim, tin, tit, tour, tout, tum, me, 
+    tad, tail, taj, tar, tax, tec, ted, tel, ter, tex, tic, tied, tier, ties, tim, tin, tit, tour, tout, tum, me,
     wag, wand, womens, wap, wax, weir, won,
     yan, yen]
 
@@ -252,7 +252,15 @@ speller:
     - 'derive/^(.*)<$/$1,/'
     - 'derive/^(.*)\\$/$1>/'
 
+grammar:
+  language: wanxiang-lts-zh-hans
+  collocation_max_length: 10
+  collocation_min_length: 2
+
 translator:
+  contextual_suggestions: true
+  max_homophones: 7
+  max_homographs: 7
   dictionary: terra_pinyin
   initial_quality: 1.2
   spelling_hints: 3  # ～字以內候選標註完整帶調拼音
