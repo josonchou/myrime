@@ -20,7 +20,7 @@ schema:
     - wubi98_mint # 98五笔库 https://github.com/yanhuacuo/98wubi-tables
     - stroke
     - melt_eng # 英文方案
-    
+
 switches:
   - name: ascii_mode
     reset: 0
@@ -40,7 +40,7 @@ switches:
   - name: ascii_punct
     states: [ "。，" , "．，" ]
     reset: 0
-    
+
 engine:
   processors:
     - lua_processor@*select_character
@@ -196,14 +196,21 @@ reduce_english_filter:
   tad, tail, taj, tar, tax, tec, ted, tel, ter, tex, tic, tied, tier, ties, tim, tin, tit, tour, tout, tum,
   wag, wand, womens, wap, wax, weir, won,
   yan, yen]
-  
-  
+
+
 # 中国农历配置
 chineseLunarCalendar_translator: lunar
 
+grammar:
+  language: wanxiang-lts-zh-hans
+  collocation_max_length: 10
+  collocation_min_length: 2
 
 translator:
-  # enable_correction: true      # Rime自带的按键纠错，适用于手机26键 参考: https://github.com/rime/librime/pull/228
+  contextual_suggestions: true
+  max_homophones: 7
+  max_homographs: 7
+  enable_correction: true      # Rime自带的按键纠错，适用于手机26键 参考: https://github.com/rime/librime/pull/228
   # 字典文件
   dictionary: rime_mint          # 使用的字典文件
   enable_word_completion: true   # 大于 4 音节的词条自动补全，librime > 1.11.2
@@ -346,7 +353,7 @@ wubi98_mint:
   enable_completion: true
   prefix: "Uw"
   tips: 〔五笔〕
-  
+
 stroke:
   tag: stroke
   dictionary: stroke
@@ -355,7 +362,7 @@ stroke:
   tips: 〔笔画〕
   preedit_format:
     - xlit/hspnz/一丨丿丶乙/
-    
+
 radical_reverse_lookup:
   tag: radical_lookup
   dictionary: radical_pinyin
@@ -365,12 +372,12 @@ radical_reverse_lookup:
     # comment_format:
   #   - erase/^.*$// # 删除注释
   tips: 〔拆字〕
-  
+
 reverse_lookup:
   tags: [wubi98_mint,stroke,radical_lookup]
   overwrite_comment: true
   dictionary: rime_mint
-  
+
 punctuator:
   import_preset: symbols
   # 定义部分半角字符
@@ -391,7 +398,7 @@ punctuator:
       "$": ["¥", "$", "€", "£", "¢", "¤"]
       "<": ["《", "〈", "«", "<"]
       ">": ["》", "〉", "»", ">"]
-    
+
 # 反查映射
 recognizer:
   import_preset: default
@@ -419,6 +426,3 @@ key_binder:
 
   # 候选词个数
   page_size: 6
-
-
-
