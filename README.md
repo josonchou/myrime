@@ -14,11 +14,13 @@
 
 - [oh-my-rime.zip: https://cnb.cool/Mintimate/rime/oh-my-rime/-/releases/download/latest/oh-my-rime.zip](https://cnb.cool/Mintimate/rime/oh-my-rime/-/releases/download/latest/oh-my-rime.zip)
 
-2025-07-09 破坏性变更: 
+2025-07-09 破坏性变更:
+
 - 词库从白霜词库切换到万象词库以提升地球拼音的体验，同时更加兼容万象模型的挂载。
 - 词库内拼音文件更名为`rime_mint`开头，方便后续维护。
 
 因为破坏性变更，当前还需要解决问题:
+
 - [x] 切换为万象词库后，用户词典(.userdb)需要脚本刷写。否则音调无法显示。提供[离线工具以方便用户迁移](https://www.mintimate.cc/zh/guide/faQ.html#%E7%94%A8%E6%88%B7%E8%AF%8D%E5%85%B8%E9%9F%B3%E6%A0%87%E8%BD%AC%E5%86%99)。
 - [x] 万象预编辑脚本和纠错脚本冲突问题已经解决，但是纠错样式和万象词库的样式一致，无法区分，考虑后续是否调整。
 
@@ -34,8 +36,8 @@ Rime 配置教程：
 如果你有QQ帐号，可以加入群聊（禁止广告）: 703260572
 
 **强烈建议[配合文档: https://www.mintimate.cc](https://www.mintimate.cc)进行操作!!!**
-> 项目文档 CDN 加速及安全防护由 [Tencent EdgeOne](https://edgeone.ai/zh?from=github) 赞助。<br/><img src="https://edgeone.ai/media/34fe3a45-492d-4ea4-ae5d-ea1087ca7b4b.png" alt="Tencent EdgeOne" height="20">
 
+> 项目文档 CDN 加速及安全防护由 [Tencent EdgeOne](https://edgeone.ai/zh?from=github) 赞助。<br/><img src="https://edgeone.ai/media/34fe3a45-492d-4ea4-ae5d-ea1087ca7b4b.png" alt="Tencent EdgeOne" height="20">
 
 本输入方案内包含：
 
@@ -87,12 +89,13 @@ Rime 配置教程：
   - Squirrel: `$TMPDIR`
 - Linux
   - iBus:`/tmp`
-  
+
 仓输入法 Hamster 内如何使用九宫格输入？
 
 薄荷方案内，基于[Hamster](https://github.com/imfuxiao/Hamster/) 九宫格布局和[雾凇九宫格](https://github.com/iDvel/rime-ice/blob/main/t9.schema.yaml)移植了九宫格。需要同时启用九宫格方案（输入方案设置）和九宫格布局（键盘设置 - 键盘布局 - 中文 9 键）。
 
 如果你喜欢使用 Rime 打一些长句，那么强烈建议配合语言模型来使用。参考教程:
+
 - [Rime 内如何配置语言模型 -- 薄荷输入配置教程](https://www.mintimate.cc/zh/guide/languageModel.html)
 
 ## 配置文件说明
@@ -139,26 +142,25 @@ dicts
 
 ```yaml
 ---
-name: rime_mint                  # 注意name和文件名一致
+name: rime_mint # 注意name和文件名一致
 version: "2025.07.06"
 sort: by_weight
 use_preset_vocabulary: false
 # 此处为 输入法所用到的词库，既补充拓展词库的地方
 # 雾凇拼音词库，由Github Robot自动更新
 import_tables:
-  - dicts/custom_simple          # 自定义
-  - dicts/rime_mint.chars        # 单字词库（万象拼音词库基础版本）
-  - dicts/rime_mint.base         # 基础词库（万象拼音词库基础版本）
-  - dicts/rime_mint.correlation  # 关联词库（万象拼音词库基础版本）
-  - dicts/rime_mint.ext          # 联想词库（万象拼音词库基础版本）
-  - dicts/other_kaomoji          # 颜文字表情（按`VV`呼出)
-  - dicts/rime_ice.others        # 雾凇拼音 others词库（用于自动纠错）
+  - dicts/custom_simple # 自定义
+  - dicts/rime_mint.chars # 单字词库（万象拼音词库基础版本）
+  - dicts/rime_mint.base # 基础词库（万象拼音词库基础版本）
+  - dicts/rime_mint.correlation # 关联词库（万象拼音词库基础版本）
+  - dicts/rime_mint.ext # 联想词库（万象拼音词库基础版本）
+  - dicts/other_kaomoji # 颜文字表情（按`VV`呼出)
+  - dicts/rime_ice.others # 雾凇拼音 others词库（用于自动纠错）
   # 20240608 Emoji完全交由OpenCC，不再使用字典作为补充
   # - dicts/other_emoji            # Emoji(仅仅作为补充，实际使用一般是OpenCC生效)
-...
 ```
 
-------
+---
 
 ## 支持
 
@@ -197,6 +199,7 @@ import_tables:
 </picture>
 
 ## Contributors ✨
+
 <a href="https://github.com/Mintimate/oh-my-rime/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Mintimate/oh-my-rime" />
 </a>

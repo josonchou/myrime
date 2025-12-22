@@ -34,6 +34,7 @@ switches:
 
 engine:
   processors:
+    - lua_processor@*ascii_on_esc
     - lua_processor@*select_character              # 以词定字
     - lua_processor@*codeLengthLimit_processor     # 使用Lua限制输入内容的最大长度(防止过长而卡顿)
     - ascii_composer
@@ -149,7 +150,7 @@ emoji_suggestion:
   inherit_comment: false
 
 # 最大输入长度
-codeLengthLimit_processor: 25
+codeLengthLimit_processor: 40
 
 # 中国农历配置
 chineseLunarCalendar_translator: lunar
@@ -258,6 +259,9 @@ speller:
     - 'derive/^(.*)\\$/$1>/'
 
 translator:
+  contextual_suggestions: true
+  max_homophones: 7
+  max_homographs: 7
   dictionary: terra_pinyin
   initial_quality: 1.2
   spelling_hints: 3  # ～字以內候選標註完整帶調拼音

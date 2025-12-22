@@ -43,6 +43,7 @@ switches:
 
 engine:
   processors:
+    - lua_processor@*ascii_on_esc
     - lua_processor@*select_character
     - lua_processor@*codeLengthLimit_processor     # 使用Lua限制输入内容的最大长度(防止过长而卡顿)
     - ascii_composer                               # ※ 處理西文模式及中西文切換
@@ -155,7 +156,7 @@ transcription_cc:
   excluded_types: [ reverse_lookup ]  # 不转换反查（两分拼字）的内容
 
 # 最大输入长度
-codeLengthLimit_processor: 25
+codeLengthLimit_processor: 40
 
 # Emoji模块
 emoji_suggestion:
@@ -398,7 +399,6 @@ punctuator:
       "$": ["¥", "$", "€", "£", "¢", "¤"]
       "<": ["《", "〈", "«", "<"]
       ">": ["》", "〉", "»", ">"]
-
 # 反查映射
 recognizer:
   import_preset: default
@@ -411,9 +411,7 @@ recognizer:
     rmb: "^R[0-9]+[.]?[0-9]*"        # 响应 lua_translator@number_translator 脚本将自动获取第 2 个字符作为触发前缀
     expression: "^=.*$"              # 响应 lua_translator@expression_translator 脚本将自动获取第 2 个字符作为触发前缀
     gregorian_to_lunar: "^N[0-9]{1,8}"  # 响应 lua_translator@Chinese_lunar_calendar 公历转农历，输入 N20240115 得到「二〇二四年腊月初五」，脚本将自动获取第 2 个字符作为触发前缀
-    uppercase: ""  # 覆写默认的 uppercase 使其可以在输入大写后，输入数字
-
-
+    uppercase: ""  # 覆写默认的 uppercase 使其可以在输入大写后，输入数字　　　
 key_binder:
   import_preset: default
   # Lua 配置: shijian.lua 的引导符，涉及：日期、时间、节日、节气、生日、问候模板等功能
