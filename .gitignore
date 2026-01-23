@@ -14,5 +14,4 @@ build
 
 _rsync
 rsync
-dicts
 wanxiang-lts-zh-hans.gram
